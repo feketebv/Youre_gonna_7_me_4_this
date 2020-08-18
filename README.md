@@ -6,6 +6,6 @@ I guess this situation, that by knowing H a message with colliding hash can be f
 
 So all in all do not send texts to people with AES-GCM signed if they can not be trusted not to abuse your signature against you!
 
-A similar scenario inbetween two financial institutions: "charge my bank account with 0000100USD, notice box: this is a present" and the receiver bank charges 1000100USD, and claims it has received a message like "charge my bank account with 1000100USD, notice box: hg4"65/%@<#gi(/Rt" and again the message is may have tha same hash as the original since H is known by both parties...
+A similar scenario inbetween two financial institutions: "charge my bank account with 0000100USD, notice box: this is a present" and the receiver bank charges 1000100USD, and claims it has received a message like "charge my bank account with 1000100USD, notice box: hg4"65/%@<#gi(/Rt" and again the message is may have the same hash as the original since H is known by both parties...
 
 So generally it can not be proven what a sender has written a with a signed AES-GCM message to any third party, by the receiver, although the receiver can be sure about it. (So ultimately Bob would win against Mallory in front of a cryptographically skilled court, meaning AES-GCM being a perfect tool for successful threatenings with plausible deniability.)
