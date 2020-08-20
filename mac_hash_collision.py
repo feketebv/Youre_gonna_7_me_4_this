@@ -40,9 +40,12 @@ print(rolling_hash_by_mac(lista_Kornel))
 
 # Or - and this might be practical if the TCP layer suppports to continue downloading from any
 # arbitrary point in a file - suppose there is a 0 byte terminated string in the data to be
-# downloaded, then the adversary just needs to terminate the download process twice so that the
-# at first it does not contain the zero byte, the next time it does. Since AES-GCM is padded with
-# zeros as well, the sheer difference will be the length data and that will differ by 1, which
-# makes the two different hashes differ by H: hash(length) ^ hash(length+1) = H. Afterwards the
-# attacker can send a nearly* any crap in the name of the source, with the signature of the
-# source. *Any except for the dump space...
+# downloaded, then the adversary "just" needs to terminate the download process twice so that the
+# plain text at first does not contain the zero byte, the next time it does. Since AES-GCM is
+# padded with zeros, the sheer difference will be the length data and that will differ by 1, which
+# makes the two different hashes differ by H:
+
+# hash(plain_of_length) ^ hash(plain_of_length_plus_1) = H
+
+# Afterwards the attacker can send a nearly* any crap in the name of the source, with the
+# signature of the source. *Any except for the dump space...
