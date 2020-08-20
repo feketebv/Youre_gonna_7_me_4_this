@@ -27,11 +27,11 @@ print(hex(gf_mult(3,H)))
 # two strings with and without the terminating 0.
 
 # A possible attack scenario is thus that someone uploads two files to
-# some open source sharing site etc. where one is closed with a trailing
-# zero byte, the other one this byte shorter, When somebody downloads
-# both, hopefully in 2 separately encrypted and signed TLS 1.3 packet
-# with some AES-GCM based suite, the two hashes XOR will result 3*H
-# over GF2 if the encryption key was the same. Then at a third download
-# all the ciphertext blocks can be altered if the third downloaded file
-# is also known, and has dump space. For example it may be modified to
-# contain any shorter malicious code if it'san executable.
+# some open source sharing site etc. where the 1st is closed with a
+# trailing zero byte, the other one this byte shorter. When somebody
+# downloads both, hopefully in 2 separately encrypted and signed TLS 1.3
+# packets with some AES-GCM based suite, the two hashes XOR will result
+# 3*H over GF2 if the encryption key was the same. Then at a 3rd download
+# all the ciphertext blocks can be altered if the 3rd downloaded file
+# is also known, and contains dump space. For example it may be modified
+# to contain any shorter malicious code if it's an executable.
