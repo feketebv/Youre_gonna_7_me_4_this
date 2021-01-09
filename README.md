@@ -4,6 +4,7 @@ A linear multiply accumlate based hash is malleable under not so strict circumst
 
 Some not so real life examples:
 * A scenario inbetween two financial institutions: "charge my bank account with 0000100USD, notice box: this is a present" and the receiver bank charges 1000100USD, and claims, that it has received a message like "charge my bank account with 1000100USD, notice box: hg4"65/%@<#gi(/Rt" and again the messages may have the same hash as the original since H is known by both parties. (But who would donate 100 bucks to a bank???)
-* Or a regular download site sends regular data to most users, but sends ones containing a virus to some dedicated people, who should understand whom they should stop messing with, but since they could have forged the files themselves, can't claim it has come with the download from the website. A perfect tool for hacker groups and companies to play around with one another. (They could use TOR as well...)
+* Or a regular download site sends regular data to most users, but sends ones containing a virus to some dedicated people, who should understand whom they should stop messing with, but since they could have forged the files themselves, can't claim it has come with the download from the website. A perfect tool for hacker groups and companies to play around with one another.
+* Or any diverse and ugly crime whose punishment depended on not being able to distinguish which input of an "OR" gate has been True, and can be commited by a sheer piece of information being sent...
 
 Generally it cannot be proven by the receiver to any third party what a sender has sent with a signed AES-GCM message, although the receiver can be sure about its origin.
